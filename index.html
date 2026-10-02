@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Doce Encanto — bolos artesanais feitos com amor e muito sabor.">
+<title>Doces Da Ma| Bolos Artesanais</title>
+
+<!-- Fonte elegante para títulos -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --rosa:#e62f68;
+    --rosa-escuro:#bd164d;
+    --rosa-claro:#fff0f4;
+    --rosa-suave:#ffe2ea;
+    --vinho:#a91545;
+    --texto:#262126;
+    --branco:#fff;
+    --sombra:0 12px 35px rgba(166,30,73,.12);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+    font-family:"DM Sans",Arial,sans-serif;
+    color:var(--texto);
+    background:#fff8fa;
+    line-height:1.5;
+}
+
+img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+}
+
+a{text-decoration:none;color:inherit}
+
+button,.botao{font:inherit}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,248,250,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(189,22,77,.08);
+}
+
+.header-inner{
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.logo-icon{
+    width:52px;
+    height:52px;
+    border:3px solid var(--vinho);
+    border-radius:50% 50% 45% 45%;
+    display:grid;
+    place-items:center;
+    font-size:28px;
+    color:var(--vinho);
+    position:relative;
+}
+
+.logo-text{
+    color:var(--vinho);
+    line-height:1;
+}
+
+.logo-text strong{
+    display:block;
+    font-family:"Great Vibes",cursive;
+    font-size:34px;
+    font-weight:400;
+}
+
+.logo-text span{
+    display:block;
+    text-align:center;
+    margin-top:3px;
+    font-size:10px;
+    letter-spacing:3px;
+    color:#4b3940;
+}
+
+.nav{
+    display:flex;
+    gap:24px;
+    color:#663e4a;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav a:hover{color:var(--rosa)}
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.whatsapp-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    background:var(--rosa);
+    color:white;
+    padding:13px 22px;
+    border-radius:30px;
+    font-weight:700;
+    box-shadow:0 8px 20px rgba(230,47,104,.24);
+    transition:.2s;
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-2px);
+    background:var(--rosa-escuro);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    font-size:29px;
+    color:var(--rosa);
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero{
+    min-height:600px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(90deg,rgba(126,22,31,.88) 0%,rgba(126,22,31,.65) 38%,rgba(126,22,31,.10) 73%),
+        url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+}
+
+.hero-content{
+    width:min(1180px,92%);
+    margin:auto;
+    color:white;
+    padding:80px 0;
+}
+
+.hero-small{
+    font-weight:700;
+    letter-spacing:2px;
+    font-size:16px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-family:"Great Vibes",cursive;
+    font-size:clamp(58px,7vw,94px);
+    line-height:.9;
+    font-weight:400;
+    max-width:650px;
+    margin:12px 0 25px;
+    text-shadow:0 4px 20px rgba(0,0,0,.15);
+}
+
+.hero h1 span{display:block}
+
+.hero p{
+    max-width:410px;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero .whatsapp-btn{
+    background:#ef3f78;
+    padding:16px 27px;
+    font-size:16px;
+}
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+.beneficios{
+    background:white;
+    box-shadow:var(--sombra);
+    position:relative;
+    z-index:2;
+}
+
+.beneficios-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.beneficio{
+    text-align:center;
+    padding:27px 16px;
+    border-right:1px solid #f3dbe2;
+}
+
+.beneficio:last-child{border-right:0}
+
+.beneficio .icone{
+    font-size:34px;
+    color:var(--rosa);
+    margin-bottom:6px;
+}
+
+.beneficio strong{
+    display:block;
+    color:#cf285d;
+    font-size:16px;
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+.secao{
+    padding:70px 0;
+}
+
+.titulo{
+    text-align:center;
+    color:var(--vinho);
+    margin-bottom:35px;
+}
+
+.titulo h2{
+    font-family:"Great Vibes",cursive;
+    font-size:55px;
+    font-weight:400;
+    line-height:1;
+}
+
+.titulo p{
+    margin-top:10px;
+    font-size:17px;
+}
+
+/* =========================
+   BOLOS
+========================= */
+.bolos-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.bolo-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(120,20,50,.09);
+    transition:.25s;
+}
+
+.bolo-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 35px rgba(120,20,50,.15);
+}
+
+.bolo-img{
+    height:185px;
+    overflow:hidden;
+}
+
+.bolo-img img{
+    height:100%;
+    transition:.35s;
+}
+
+.bolo-card:hover .bolo-img img{transform:scale(1.05)}
+
+.bolo-nome{
+    background:linear-gradient(90deg,#ed3b78,#d92364);
+    color:white;
+    text-align:center;
+    padding:8px;
+    font-weight:700;
+    font-size:16px;
+}
+
+.bolo-card p{
+    padding:15px 10px 20px;
+    text-align:center;
+    font-size:14px;
+    min-height:75px;
+    background:#fff5f7;
+}
+
+/* =========================
+   PERSONALIZADOS
+========================= */
+.personalizado{
+    background:linear-gradient(100deg,#ffc2d1,#ff9fb8);
+    border-radius:25px;
+    overflow:hidden;
+    display:grid;
+    grid-template-columns:34% 1fr;
+    min-height:285px;
+    align-items:center;
+}
+
+.personalizado-img{
+    height:100%;
+    min-height:285px;
+}
+
+.personalizado-img img{height:100%}
+
+.personalizado-content{
+    padding:38px 45px;
+    position:relative;
+}
+
+.personalizado-content h2{
+    color:var(--vinho);
+    font-family:"Great Vibes",cursive;
+    font-size:50px;
+    line-height:1;
+}
+
+.personalizado-content h3{
+    color:#a61948;
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.lista{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:7px;
+    margin-bottom:22px;
+}
+
+.lista li::before{
+    content:"✓";
+    color:#b7194c;
+    font-weight:800;
+    margin-right:8px;
+}
+
+.personalizado .whatsapp-btn{
+    display:inline-flex;
+}
+
+/* =========================
+   DEPOIMENTOS
+========================= */
+.depoimentos{
+    background:#fff0f4;
+}
+
+.depoimentos-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.depoimento{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 7px 20px rgba(120,20,50,.07);
+}
+
+.cliente{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:10px;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.estrelas{
+    color:#f39a00;
+    font-size:15px;
+    letter-spacing:1px;
+}
+
+.depoimento p{
+    font-size:14px;
+    color:#493c41;
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+.cta{
+    background:linear-gradient(100deg,#ef2867,#cf164f);
+    color:white;
+    padding:35px 0;
+}
+
+.cta-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.cta h2{
+    font-size:25px;
+}
+
+.cta p{opacity:.9}
+
+.cta .whatsapp-btn{
+    background:white;
+    color:#d51e57;
+    white-space:nowrap;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+footer{
+    background:#bd164d;
+    color:white;
+    padding:18px 0;
+}
+
+.footer-grid{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    font-size:13px;
+}
+
+.footer-item{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+/* =========================
+   ANIMAÇÕES
+========================= */
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:.7s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:none;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media(max-width:950px){
+    .nav{display:none}
+    .menu-btn{display:block}
+
+    .bolos-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .personalizado{
+        grid-template-columns:40% 1fr;
+    }
+}
+
+@media(max-width:700px){
+    .container{width:94%}
+
+    .header-inner{min-height:72px}
+
+    .logo-icon{
+        width:43px;
+        height:43px;
+        font-size:23px;
+    }
+
+    .logo-text strong{font-size:28px}
+    .logo-text span{font-size:8px;letter-spacing:2px}
+
+    .header-actions .whatsapp-btn{
+        padding:10px 14px;
+        font-size:13px;
+    }
+
+    .menu-btn{font-size:25px}
+
+    .hero{
+        min-height:650px;
+        background:
+            linear-gradient(0deg,rgba(100,14,25,.92) 0%,rgba(100,14,25,.56) 53%,rgba(100,14,25,.15) 100%),
+            url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=85")
+            center/cover;
+    }
+
+    .hero-content{
+        padding:80px 0 55px;
+        align-self:flex-end;
+    }
+
+    .hero-small{font-size:13px}
+    .hero h1{font-size:64px;max-width:100%}
+    .hero p{font-size:16px}
+
+    .beneficios-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .beneficio{
+        border-bottom:1px solid #f3dbe2;
+    }
+
+    .secao{padding:55px 0}
+
+    .titulo h2{font-size:48px}
+
+    .bolos-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .bolo-img{height:145px}
+
+    .bolo-card p{
+        font-size:13px;
+        min-height:70px;
+    }
+
+    .personalizado{
+        display:block;
+    }
+
+    .personalizado-img{
+        height:220px;
+        min-height:0;
+    }
+
+    .personalizado-content{
+        padding:28px 22px;
+    }
+
+    .personalizado-content h2{font-size:43px}
+
+    .lista{
+        grid-template-columns:1fr;
+    }
+
+    .depoimentos-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta-inner{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-grid{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+@media(max-width:430px){
+    .header-actions .whatsapp-btn{
+        display:none;
+    }
+
+    .hero h1{font-size:57px}
+
+    .bolos-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .bolo-img{height:130px}
+
+    .titulo h2{font-size:44px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container header-inner">
+
+        <a href="#" class="logo">
+            <div class="logo-icon">🧁</div>
+            <div class="logo-text">
+                <strong>Doces Da Ma</strong>
+                <span>BOLOS ARTESANAIS</span>
+            </div>
+        </a>
+
+        <nav class="nav">
+            <a href="#bolos">Bolos</a>
+            <a href="#personalizados">Personalizados</a>
+            <a href="#depoimentos">Clientes</a>
+        </nav>
+
+        <div class="header-actions">
+            <a class="whatsapp-btn" href="https://wa.me/5534996465429" target="_blank">
+                💬 Faça seu pedido
+            </a>
+            <button class="menu-btn" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-small">BOLOS FEITOS COM</div>
+
+            <h1>
+                Amor e muito
+                <span>Sabor ♥</span>
+            </h1>
+
+            <p>
+                Deixe seus momentos ainda mais especiais com nossos
+                bolos artesanais, feitos com ingredientes selecionados
+                e muito carinho!
+            </p>
+
+            <a class="whatsapp-btn" href="https://wa.me/5534999999999" target="_blank">
+                💬 Faça seu pedido agora → 
+            </a>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="beneficios">
+        <div class="container beneficios-grid">
+            <div class="beneficio">
+                <div class="icone">🌿</div>
+                <strong>Ingredientes<br>selecionados</strong>
+            </div>
+
+            <div class="beneficio">
+                <div class="icone">♡</div>
+                <strong>Feitos<br>artesanalmente</strong>
+            </div>
+
+            <div class="beneficio">
+                <div class="icone">🚚</div>
+                <strong>Entrega rápida<br>e segura</strong>
+            </div>
+
+            <div class="beneficio">
+                <div class="icone">♡</div>
+                <strong>Mais de 1.000<br>clientes felizes</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOLOS -->
+    <section class="secao" id="bolos">
+        <div class="container">
+
+            <div class="titulo reveal">
+                <h2>♥ Nossos Bolos ♥</h2>
+                <p>Escolha o sabor que mais combina com você!</p>
+            </div>
+
+            <div class="bolos-grid">
+
+                <article class="bolo-card reveal">
+                    <div class="bolo-img">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=85" alt="Bolo de chocolate">
+                    </div>
+                    <div class="bolo-nome">Chocolate</div>
+                    <p>O clássico que nunca decepciona!</p>
+                </article>
+
+                <article class="bolo-card reveal">
+                    <div class="bolo-img">
+                        <img src="https://cdnm.westwing.com.br/glossary/uploads/br/2023/12/22203954/O-bolo-de-leite-ninho-com-morango-e-a-aposta-certa-para-agradar-em-qualquer-evento.-Fonte-Unsplash.jpg" alt="Bolo de morango">
+                    </div>
+                    <div class="bolo-nome">Morango</div>
+                    <p>Leve, fresco e irresistível!</p>
+                </article>
+
+                <article class="bolo-card reveal">
+                    <div class="bolo-img">
+                        <img src="https://cdn.mamacida.com.br/wp-content/uploads/2025/07/img-6162-fotor-20240609224025.jpg" alt="Bolo de ninho">
+                    </div>
+                    <div class="bolo-nome">Ninho</div>
+                    <p>Cremoso e delicioso!</p>
+                </article>
+
+                <article class="bolo-card reveal">
+                    <div class="bolo-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxXsLHMFEsWfDn0Ql8-5MGsLf2NVCtacEHvBympCRZjQ&s=10" alt="Bolo de maracujá">
+                    </div>
+                    <div class="bolo-nome">Maracujá</div>
+                    <p>O equilíbrio perfeito entre doce e azedo!</p>
+                </article>
+
+                <article class="bolo-card reveal">
+                    <div class="bolo-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBHiciZCK7-PxA3-0ebhW8pgGYj-QAQ84d4VhceDyrAhZbZGu8LOrDPSw&s=10" alt="Bolo red velvet">
+                    </div>
+                    <div class="bolo-nome">Red Velvet</div>
+                    <p>Sofisticação em cada fatia!</p>
+                </article>
+
+                <article class="bolo-card reveal">
+                    <div class="bolo-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2KWcpDxJSSAw17V_dJwL10lqbIY2J3j-eZSMhtb_Qag&s=10" alt="Bolo red velvet">
+                    </div>
+                    <div class="bolo-nome">coco com abacaxi</div>
+                    <!-- <p>Sabor tropical e delicioso!</p> -->
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PERSONALIZADOS -->
+    <section class="secao" id="personalizados">
+        <div class="container">
+            <div class="personalizado reveal">
+
+                <div class="personalizado-img">
+                    <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=1000&q=85" alt="Bolo personalizado">
+                </div>
+
+                <div class="personalizado-content">
+                    <h2>Bolos personalizados</h2>
+                    <h3>para todas as ocasiões!</h3>
+
+                    <ul class="lista">
+                        <li>Aniversários</li>
+                        <li>Casamentos</li>
+                        <li>Chá revelação</li>
+                        <li>Confraternizações</li>
+                        <li>Datas especiais</li>
+                        <li>E muito mais...</li>
+                    </ul>
+
+                    <a class="whatsapp-btn" href="https://wa.me/5534999999999" target="_blank">
+                        💬 Solicite um orçamento →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="secao depoimentos" id="depoimentos">
+        <div class="container">
+
+            <div class="titulo reveal">
+                <h2>O que nossas clientes dizem ♥</h2>
+            </div>
+
+            <div class="depoimentos-grid">
+
+                <article class="depoimento reveal">
+                    <div class="cliente">
+                        <img class="avatar" src="https://i.pravatar.cc/100?img=47" alt="Cliente">
+                        <div>
+                            <strong>Juliana Souza</strong>
+                            <div class="estrelas">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>“O bolo estava simplesmente perfeito! Além de lindo, o sabor é incrível. Super recomendo!”</p>
+                </article>
+
+                <article class="depoimento reveal">
+                    <div class="cliente">
+                        <img class="avatar" src="https://i.pravatar.cc/100?img=44" alt="Cliente">
+                        <div>
+                            <strong>Camila Ferreira</strong>
+                            <div class="estrelas">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>“Fiz o pedido para o aniversário da minha filha e foi um sucesso! Todo mundo amou!”</p>
+                </article>
+
+                <article class="depoimento reveal">
+                    <div class="cliente">
+                        <img class="avatar" src="https://i.pravatar.cc/100?img=49" alt="Cliente">
+                        <div>
+                            <strong>Larissa Mendes</strong>
+                            <div class="estrelas">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>“Atendimento maravilhoso e entrega no prazo. O bolo é ainda mais gostoso pessoalmente!”</p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container cta-inner">
+            <div>
+                <h2>🧁 Seu próximo momento doce começa aqui!</h2>
+                <p>Faça seu pedido e transforme sua comemoração.</p>
+            </div>
+
+            <a class="whatsapp-btn" href="https://wa.me/5534999999999" target="_blank">
+                💬 Faça seu pedido agora →
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-item">💳 Pagamento facilitado</div>
+        <div class="footer-item">🚚 Entrega para toda a cidade</div>
+        <div class="footer-item">◎ Siga-nos no Instagram</div>
+    </div>
+</footer>
+
+<script>
+function toggleMenu(){
+    const nav = document.querySelector(".nav");
+
+    if(nav.style.display === "flex"){
+        nav.style.display = "";
+    }else{
+        nav.style.display = "flex";
+        nav.style.position = "absolute";
+        nav.style.top = "72px";
+        nav.style.left = "0";
+        nav.style.right = "0";
+        nav.style.padding = "20px";
+        nav.style.flexDirection = "column";
+        nav.style.background = "#fff8fa";
+        nav.style.boxShadow = "0 12px 25px rgba(0,0,0,.08)";
+    }
+}
+
+const elementos = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+        }
+    });
+},{threshold:.12});
+
+elementos.forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
