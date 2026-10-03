@@ -316,6 +316,57 @@ header{
     background:#fff5f7;
 }
 
+    /* =========================
+   DOCINHOS 
+========================= */
+.docinhos-grid{
+display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.docinho-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(120,20,50,.09);
+    transition:.25s;
+}
+
+.docinho-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 35px rgba(120,20,50,.15);
+}
+
+.docinho-img{
+    height:185px;
+    overflow:hidden;
+}
+
+.docinho-img img{
+    height:100%;
+    transition:.35s;
+}
+
+.docinho-card:hover .docinho-img img{transform:scale(1.05)}
+
+.docinho-nome{
+    background:linear-gradient(90deg,#ed3b78,#d92364);
+    color:white;
+    text-align:center;
+    padding:8px;
+    font-weight:700;
+    font-size:16px;
+}
+
+.docinho-card p{
+    padding:15px 10px 20px;
+    text-align:center;
+    font-size:14px;
+    min-height:75px;
+    background:#fff5f7; 
+
+}
 /* =========================
    PERSONALIZADOS
 ========================= */
@@ -559,6 +610,17 @@ footer{
         font-size:13px;
         min-height:70px;
     }
+    .docinho-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .docinho-img{height:145px}
+
+    .docinho-card p{
+        font-size:13px;
+        min-height:70px;
+    }
 
     .personalizado{
         display:block;
@@ -607,7 +669,15 @@ footer{
 
     .bolo-img{height:130px}
 
+     .docinhos-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .docinho-img{height:130px}
+
+
     .titulo h2{font-size:44px}
+    
 }
 </style>
 </head>
@@ -627,6 +697,7 @@ footer{
 
         <nav class="nav">
             <a href="#bolos">Bolos</a>
+            <a href="#docinhos">Docinhos</a>
             <a href="#personalizados">Personalizados</a>
             <a href="#depoimentos">Clientes</a>
         </nav>
@@ -748,6 +819,102 @@ footer{
                         <p>Sabor tropical e delicioso!</p> 
                 </article>
 
+
+            </div>
+        </div>
+    </section>
+
+     <!-- DOCINHOS -->
+
+    <section class="secao" id="docinhos">
+        <div class="container">
+
+            <div class="titulo reveal">
+                <h2>♥ Nossos Docinhos ♥</h2>
+                <p>Escolha o sabor que mais combina com você!</p>
+            </div>
+
+            <div class="docinhos-grid">
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo7SGnEfz88AN11jpQbtAm69aJ6-0J9BiosfDUrNJXVg&s=10" alt="Docinho de brigadeiro">
+                    </div>
+                    <div class="docinho-nome">Brigadeiro</div>
+                    <p>O clássico que nunca decepciona</p>
+                </article>
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgSu77Y8CG58n_MEP3HRYuwdGuh6S1tVMbwgGuA-L47Q&s=10" alt="Docinho de leite ninho">
+                    </div>
+                    <div class="docinho-nome">Leite Ninho</div>
+                    <p>Um pedacinho de felicidade embrulhado para você</p>
+                </article>
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW80Ca1iQf7XSqoN92YMcC-5BIKt-Jj8Z5KyWyTRXZ2A&s=10" alt="Docinho de beijinho">
+                    </div>
+                    <div class="docinho-nome">Beijinho</div>
+                    <p>Adoce o dia de quem você ama com um Beijinho</p>
+                </article>
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5MewaawTqUnKjUZZgU8Qj36cPPNYTLoFv2qo5NeoIXA&s=10" alt="Docinho de olho de sogra">
+                    </div>
+                    <div class="docinho-nome">Olho de Sogra</div>
+                    <p>Feito com carinho para deixar sua festa ainda mais especial</p>
+                </article>
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZL5x7UDVWNYXvwGNoDX8c8GE3ApvQTbF8g4F98eDRJftJ1_Vf1p-Iu7Gk&s=10" alt="Docinho de cajuzinho">
+                    </div>
+                    <div class="docinho-nome">Cajuzinho</div>
+                    <p>Um clássico da nossa confeitaria feito especialmente para você</p>
+                </article>
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBQJaMFSYOtF2Uj_rSeWhTCSo4-3NHNaWj5g4M6Y7SCg&s=10" alt="Docinho coco com abacaxi">
+                    </div>
+                    <div class="docinho-nome">Coco com Abacaxi</div>
+                     <p>Sabor tropical e delicioso</p>
+                </article>
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrCYKeiN9qnwh76ztxqBz9OYIvzqrMuhIohR3pOT7BxQ&s=10" alt="docinho de oreo">
+                    </div>
+                    <div class="docinho-nome">Oreo</div>
+                     <p>Se um brigadeiro normal já é bom, com Oreo vira um evento</p>
+                </article>
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_BH1f3itBMqQMhzCd7fO8fgiEzUTvY17xVtl-nwbj8g&s=10" alt="Docinho de paçoca">
+                    </div>
+                    <div class="docinho-nome">Paçoca</div>
+                     <p>A combinação perfeita entre a tradição da paçoca e a delicadeza de um docinho artesanal</p>
+                </article>
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6aIPVBYW7Xa6sjqC3nriRHco38TsGKMqsbp4RYcax4w&s=10" alt="Docinho de brigadeiro com café">
+                    </div>
+                    <div class="docinho-nome">Brigadeiro com Café</div>
+                     <p>O sabor intenso do café combinado com a suavidade do brigadeiro</p>
+                </article>
+
+                <article class="docinho-card reveal">
+                    <div class="docinho-img">
+                        <img src="https://guiadacozinha.com.br/wp-content/uploads/2021/10/Surpresa-de-uva.webp" alt="Docinho de surpresa de uva">
+                    </div>
+                    <div class="docinho-nome">Surpresa de Uva</div>
+                     <p>Uma combinação refrescante de uvas doces e cremosidade</p>
+                </article>
 
             </div>
         </div>
